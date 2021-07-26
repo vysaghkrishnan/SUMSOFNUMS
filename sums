@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Please enter the 5 numbers with spaces  that you want to add"
+
+declare -a num_array
+
+read -a num_array
+sum=0
+for i in ${num_array[@]}; do
+  let sum+=$i
+done
+echo "sum: $sum"
